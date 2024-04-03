@@ -68,7 +68,7 @@ final class StorageManager {
     
     func doneTask(_ task: Task) {
         write {
-            realm.delete(task)
+            task.setValue(true, forKey: "isComplete")
         }
     }
 

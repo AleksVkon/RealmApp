@@ -68,7 +68,7 @@ final class TasksViewController: UITableViewController {
         }
         
         let editAction = UIContextualAction(style: .normal, title: "Edit") { [unowned self] _, _, isDone in
-            showAlert(with: task) {_ in 
+            showAlert(with: task) {_ in
                 tableView.reloadRows(at: [indexPath], with: .automatic)
             }
             isDone(true)
